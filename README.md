@@ -1,132 +1,116 @@
-<svg viewBox="0 0 900 260" xmlns="powerplant-banner.svg">
-  <defs>
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#0f1b2d"/>
-      <stop offset="55%" stop-color="#16273f"/>
-      <stop offset="100%" stop-color="#1c3350"/>
-    </linearGradient>
-    <linearGradient id="tower" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#4b5b6e"/>
-      <stop offset="50%" stop-color="#8494a6"/>
-      <stop offset="100%" stop-color="#4b5b6e"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffd85e" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#ffd85e" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="bolt" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fff6c8"/>
-      <stop offset="100%" stop-color="#ffcc33"/>
-    </linearGradient>
-  </defs>
+<div align="center">
 
-  <rect width="900" height="260" fill="url(#sky)"/>
+<img src="powerplant-banner.svg" alt="Animated power plant banner" width="100%"/>
 
-  <!-- stars -->
-  <g fill="#ffffff">
-    <circle cx="60" cy="30" r="1.4"><animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite"/></circle>
-    <circle cx="140" cy="55" r="1" ><animate attributeName="opacity" values="1;0.2;1" dur="2.4s" repeatCount="indefinite"/></circle>
-    <circle cx="770" cy="25" r="1.4"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" repeatCount="indefinite"/></circle>
-    <circle cx="820" cy="60" r="1" ><animate attributeName="opacity" values="1;0.3;1" dur="3.4s" repeatCount="indefinite"/></circle>
-    <circle cx="690" cy="40" r="1.2"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.1s" repeatCount="indefinite"/></circle>
-  </g>
+<br/>
 
-  <!-- distant hills -->
-  <path d="M0,190 Q150,160 300,190 T600,190 T900,190 V260 H0 Z" fill="#101d31"/>
+![Status](https://img.shields.io/badge/status-paused-orange?style=for-the-badge)
+![Model](https://img.shields.io/badge/model-ANN%20(PyTorch)-blueviolet?style=for-the-badge)
+![Dataset](https://img.shields.io/badge/dataset-CCPP%20(UCI)-informational?style=for-the-badge)
 
-  <!-- ===== Cooling towers ===== -->
-  <g>
-    <path d="M120,220 C110,150 100,110 130,60 C160,110 150,150 140,220 Z" fill="url(#tower)"/>
-    <ellipse cx="130" cy="60" rx="26" ry="7" fill="#3c4a5a"/>
-    <ellipse cx="130" cy="220" rx="45" ry="8" fill="#33404e"/>
-  </g>
-  <g>
-    <path d="M220,220 C208,140 196,95 232,40 C268,95 256,140 244,220 Z" fill="url(#tower)"/>
-    <ellipse cx="232" cy="40" rx="30" ry="8" fill="#3c4a5a"/>
-    <ellipse cx="232" cy="220" rx="50" ry="9" fill="#33404e"/>
-  </g>
+</div>
 
-  <!-- smoke plumes -->
-  <g fill="#cfd8e3">
-    <circle cx="130" cy="55" r="10">
-      <animate attributeName="cy" values="55;-10" dur="4s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.55;0" dur="4s" repeatCount="indefinite"/>
-      <animate attributeName="r" values="8;28" dur="4s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="126" cy="55" r="8">
-      <animate attributeName="cy" values="55;-15" dur="4s" begin="1.3s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.5;0" dur="4s" begin="1.3s" repeatCount="indefinite"/>
-      <animate attributeName="r" values="7;24" dur="4s" begin="1.3s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="232" cy="35" r="11">
-      <animate attributeName="cy" values="35;-25" dur="4.6s" begin="0.6s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.55;0" dur="4.6s" begin="0.6s" repeatCount="indefinite"/>
-      <animate attributeName="r" values="9;30" dur="4.6s" begin="0.6s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="236" cy="35" r="9">
-      <animate attributeName="cy" values="35;-20" dur="4.6s" begin="2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.5;0" dur="4.6s" begin="2s" repeatCount="indefinite"/>
-      <animate attributeName="r" values="8;26" dur="4.6s" begin="2s" repeatCount="indefinite"/>
-    </circle>
-  </g>
+Predicting the net hourly electrical energy output of a **Combined Cycle Power Plant (CCPP)** using an Artificial Neural Network (ANN) built with PyTorch.
 
-  <!-- ===== Turbine / generator gear ===== -->
-  <g transform="translate(360,190)">
-    <circle r="34" fill="none" stroke="#8494a6" stroke-width="5"/>
-    <g>
-      <path d="M0,-34 L6,-8 L-6,-8 Z" fill="#dfe6ee"/>
-      <path d="M34,0 L8,6 L8,-6 Z" fill="#dfe6ee"/>
-      <path d="M0,34 L-6,8 L6,8 Z" fill="#dfe6ee"/>
-      <path d="M-34,0 L-8,-6 L-8,6 Z" fill="#dfe6ee"/>
-      <path d="M24,-24 L4,-3 L-3,-4 Z" fill="#c3ccd7"/>
-      <path d="M24,24 L3,4 L4,-3 Z" fill="#c3ccd7"/>
-      <path d="M-24,24 L-4,3 L3,4 Z" fill="#c3ccd7"/>
-      <path d="M-24,-24 L-3,-4 L-4,3 Z" fill="#c3ccd7"/>
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="6s" repeatCount="indefinite"/>
-    </g>
-    <circle r="7" fill="#4b5b6e"/>
-  </g>
+> Status: 🚧 Work paused — will be updated soon.
 
-  <!-- ground / plant base -->
-  <rect x="300" y="215" width="330" height="10" rx="3" fill="#33404e"/>
-  <rect x="330" y="150" width="60" height="65" fill="#3c4a5a"/>
-  <rect x="500" y="130" width="70" height="85" fill="#3c4a5a"/>
-  <rect x="510" y="145" width="14" height="18" fill="#ffd85e" opacity="0.8">
-    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.2s" repeatCount="indefinite"/>
-  </rect>
-  <rect x="540" y="145" width="14" height="18" fill="#ffd85e" opacity="0.5">
-    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="1.8s" repeatCount="indefinite"/>
-  </rect>
+---
 
-  <!-- glow behind bolt -->
-  <circle cx="470" cy="120" r="55" fill="url(#glow)">
-    <animate attributeName="r" values="45;60;45" dur="2.4s" repeatCount="indefinite"/>
-  </circle>
+## Overview
 
-  <!-- lightning bolt -->
-  <path d="M478,70 L448,120 L468,120 L458,168 L500,108 L476,108 Z" fill="url(#bolt)" stroke="#ffcc33" stroke-width="1.5">
-    <animate attributeName="opacity" values="1;0.55;1" dur="1.4s" repeatCount="indefinite"/>
-  </path>
+A combined cycle power plant generates electricity using a combination of gas turbines, steam turbines, and heat recovery systems. Its output isn't constant — it fluctuates with ambient environmental conditions.
 
-  <!-- transmission line with traveling current pulses -->
-  <path id="wire1" d="M600,210 L720,120 L840,210" fill="none" stroke="#57708c" stroke-width="3"/>
-  <circle r="4" fill="#ffe27a">
-    <animateMotion dur="3s" repeatCount="indefinite">
-      <mpath href="#wire1"/>
-    </animateMotion>
-  </circle>
-  <circle r="4" fill="#ffe27a">
-    <animateMotion dur="3s" begin="1.5s" repeatCount="indefinite">
-      <mpath href="#wire1"/>
-    </animateMotion>
-  </circle>
-  <circle cx="600" cy="210" r="5" fill="#8494a6"/>
-  <circle cx="720" cy="120" r="5" fill="#8494a6"/>
-  <circle cx="840" cy="210" r="5" fill="#8494a6"/>
+This project uses **4 years of hourly sensor data** to train a neural network that predicts the plant's **net electrical energy output (PE)** from four ambient measurements, helping approximate how weather conditions affect power generation.
 
-  <!-- Title -->
-  <text x="450" y="245" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="26" font-weight="bold" fill="#ffe27a">
-    ⚡ Power Plant Energy Output Prediction ⚡
-    <animate attributeName="opacity" values="0.75;1;0.75" dur="3s" repeatCount="indefinite"/>
-  </text>
-</svg>
+---
+
+## Dataset
+
+The dataset (`powerplant_data.csv`) contains **9,568 hourly readings**, each with the following fields:
+
+| Feature | Description | Unit |
+|---------|--------------------------|--------|
+| `AT` | Ambient Temperature | °C |
+| `V` | Exhaust Vacuum | cm Hg |
+| `AP` | Ambient Pressure | mbar |
+| `RH` | Relative Humidity | % |
+| `PE` | **Net Energy Output** (target) | MW |
+
+- **Inputs:** `AT`, `V`, `AP`, `RH`
+- **Output:** `PE`
+
+---
+
+## 🧠 Model Architecture
+
+A simple feedforward ANN (Multi-Layer Perceptron) built in PyTorch:
+
+```
+Input (4 features)
+      │
+Linear(4 → 6) → ReLU
+      │
+Linear(6 → 6) → ReLU
+      │
+Linear(6 → 1)   →  Predicted PE
+```
+
+**Training setup**
+- Loss function: `MSELoss`
+- Optimizer: `Adam`
+- Epochs: `100`
+- Batch size: `32`
+- Features standardized using `StandardScaler`
+- Train/test split: `80% / 20%`
+
+---
+
+## 🗂️ Repository Structure
+
+```
+Power_Plant/
+├── ANN_Regression.ipynb   # Data loading, preprocessing, model, training loop
+├── powerplant_data.csv    # CCPP hourly sensor dataset (9,568 rows)
+└── README.md              # You are here
+```
+
+---
+
+## ⚙️ Getting Started
+
+### Requirements
+```bash
+pip install pandas numpy scikit-learn torch
+```
+
+### Run
+1. Clone the repo
+   ```bash
+   git clone https://github.com/Kushagra-2112/Power_Plant.git
+   cd Power_Plant
+   ```
+2. Open `ANN_Regression.ipynb` in Jupyter or VS Code
+3. Run all cells to preprocess the data, train the ANN, and view train/validation loss per epoch
+
+---
+
+## 📈 Roadmap
+
+- [ ] Fix training loop bug (variable typo in loss logging)
+- [ ] Fit `StandardScaler` on train set only, transform test set
+- [ ] Add evaluation metrics (RMSE, R²) on the test set
+- [ ] Plot predicted vs. actual energy output
+- [ ] Compare ANN performance against baseline models (Linear Regression, Random Forest)
+- [ ] Save trained model weights
+
+---
+
+## 📚 Dataset Credit
+
+Based on the **Combined Cycle Power Plant Data Set** from the UCI Machine Learning Repository.
+
+---
+
+## 📄 License
+
+No license specified yet.
