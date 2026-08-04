@@ -12,7 +12,7 @@
 
 Predicting the net hourly electrical energy output of a **Combined Cycle Power Plant (CCPP)** using an Artificial Neural Network (ANN) built with PyTorch.
 
-> Status: 🚧 Work paused — will be updated soon.
+> Status: Completed.
 
 ---
 
